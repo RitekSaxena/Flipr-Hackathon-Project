@@ -320,6 +320,8 @@ function App() {
           <input
             style={{ marginLeft: "3px" }}
             type="date"
+            max="2020-08-13"
+            min="2015-08-14"
             value={date}
             onChange={(e) => {
               SetDate(e.target.value);
