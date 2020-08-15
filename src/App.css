@@ -1,38 +1,53 @@
 .App {
+  font-family: "Ubuntu", sans-serif;
+}
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.mycard {
+  font-weight: normal;
+  font-size: 2.6rem;
+  color: cornflowerblue;
+}
+.progress {
+  height: 1.5em;
+  width: 40vw;
+  background-color: #c9c9c9;
+  position: relative;
+}
+.progress:before {
+  content: attr(data-label);
+  font-size: 0.8em;
+  position: absolute;
   text-align: center;
+  top: 7px;
+  left: 0;
+  right: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.progress .value {
+  background-color: #7cc4ff;
+  display: inline-block;
+  height: 100%;
 }
+.overview {
+  align-items: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid lightgray;
+  flex-wrap: wrap;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.graph {
+  width: 1500px;
+  height: 700px;
+}
+.app__form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
